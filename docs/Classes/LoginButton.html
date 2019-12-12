@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LoginButton Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/LoginButton" class="dashAnchor"></a>
+    <a title="LoginButton Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">YJLoginSDK Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">YJLoginSDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        LoginButton Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/LoginButton.html">LoginButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginButton/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginButton/Color.html">– Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginManager.html">LoginManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Display.html">Display</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginError.html">LoginError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginError/RequestErrorReason.html">– RequestErrorReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginError/ResponseFailedReason.html">– ResponseFailedReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginError/SystemErrorReason.html">– SystemErrorReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginError/UserInteractionRequiredReason.html">– UserInteractionRequiredReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginError.html#/s:10YJLoginSDK10LoginErrorO14DetailResponseV">– DetailResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Prompt.html">Prompt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ResponseType.html">ResponseType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Scope.html">Scope</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/LoginButtonDelegate.html">LoginButtonDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/LoginResult.html">LoginResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/OptionalParameters.html">OptionalParameters</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>LoginButton</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">LoginButton</span> <span class="p">:</span> <span class="kt">UIButton</span></code></pre>
+
+                </div>
+              </div>
+            <p>ログインボタン。
+<a href="https://developer.yahoo.co.jp/yconnect/loginbuttons.html">Yahoo! JAPAN IDログインボタン デザインガイドライン</a>に準拠。</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Enum"></a>
+                <a name="//apple_ref/swift/Section/Enum" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Enum"></a>
+                  <h3 class="section-name"><p>Enum</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK11LoginButtonC5StyleO"></a>
+                    <a name="//apple_ref/swift/Enum/Style" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK11LoginButtonC5StyleO">Style</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ログインボタンのデザインスタイル。</p>
+
+                        <a href="../Classes/LoginButton/Style.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Style</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK11LoginButtonC5ColorO"></a>
+                    <a name="//apple_ref/swift/Enum/Color" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK11LoginButtonC5ColorO">Color</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ログインボタンの色。</p>
+
+                        <a href="../Classes/LoginButton/Color.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Color</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20propety"></a>
+                <a name="//apple_ref/swift/Section/Public propety" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Public%20propety"></a>
+                  <h3 class="section-name"><p>Public propety</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK11LoginButtonC8delegateAA0cD8Delegate_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK11LoginButtonC8delegateAA0cD8Delegate_pSgvp">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code><a href="../Protocols/LoginButtonDelegate.html">LoginButtonDelegate</a></code>プロトコルを実装したログインアクションを制御するためのプロパティ。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/LoginButtonDelegate.html">LoginButtonDelegate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK11LoginButtonC24presentingViewControllerSo06UIViewG0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/presentingViewController" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK11LoginButtonC24presentingViewControllerSo06UIViewG0CSgvp">presentingViewController</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ログイン画面を表示するViewController。nilの場合は最前面のViewControllerにログイン画面を表示する。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">presentingViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK11LoginButtonC6scopesSayAA5ScopeOGvp"></a>
+                    <a name="//apple_ref/swift/Property/scopes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK11LoginButtonC6scopesSayAA5ScopeOGvp">scopes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>認可リクエストで指定する<code><a href="../Enums/Scope.html">Scope</a></code>。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">scopes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/Scope.html">Scope</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK11LoginButtonC5nonceSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/nonce" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK11LoginButtonC5nonceSSSgvp">nonce</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>認可リクエストで指定するnonce。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">nonce</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK11LoginButtonC13codeChallengeSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/codeChallenge" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK11LoginButtonC13codeChallengeSSSgvp">codeChallenge</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>認可リクエストで指定するcodeChallenge。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">codeChallenge</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK11LoginButtonC18optionalParametersAA08OptionalF0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/optionalParameters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK11LoginButtonC18optionalParametersAA08OptionalF0VSgvp">optionalParameters</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>認可リクエストで指定するその他の任意パラメーター。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">optionalParameters</span><span class="p">:</span> <span class="kt"><a href="../Structs/OptionalParameters.html">OptionalParameters</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK11LoginButtonC5styleAC5StyleOvp"></a>
+                    <a name="//apple_ref/swift/Property/style" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK11LoginButtonC5styleAC5StyleOvp">style</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ログインボタンのデザインスタイル。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">LoginButton</span><span class="o">.</span><span class="kt"><a href="../Classes/LoginButton/Style.html">Style</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK11LoginButtonC19iconBackgroundColorAC0G0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/iconBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK11LoginButtonC19iconBackgroundColorAC0G0Ovp">iconBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ログインボタンのアイコン背景色。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">iconBackgroundColor</span><span class="p">:</span> <span class="kt">LoginButton</span><span class="o">.</span><span class="kt"><a href="../Classes/LoginButton/Color.html">Color</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@YJLoginSDK@objc(cs)LoginButton(py)intrinsicContentSize"></a>
+                    <a name="//apple_ref/swift/Property/intrinsicContentSize" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@YJLoginSDK@objc(cs)LoginButton(py)intrinsicContentSize">intrinsicContentSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Auto Layout対応のためオーバーライド。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">intrinsicContentSize</span><span class="p">:</span> <span class="kt">CGSize</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20function"></a>
+                <a name="//apple_ref/swift/Section/Public function" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Public%20function"></a>
+                  <h3 class="section-name"><p>Public function</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@YJLoginSDK@objc(cs)LoginButton(im)init"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@YJLoginSDK@objc(cs)LoginButton(im)init">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ログインボタンを生成。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>Copyright © 2019 Yahoo Japan Corporation. All Rights Reserved.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

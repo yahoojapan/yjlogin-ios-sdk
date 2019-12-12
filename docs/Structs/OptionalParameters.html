@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>OptionalParameters Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/OptionalParameters" class="dashAnchor"></a>
+    <a title="OptionalParameters Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">YJLoginSDK Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">YJLoginSDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        OptionalParameters Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/LoginButton.html">LoginButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginButton/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginButton/Color.html">– Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginManager.html">LoginManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Display.html">Display</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginError.html">LoginError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginError/RequestErrorReason.html">– RequestErrorReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginError/ResponseFailedReason.html">– ResponseFailedReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginError/SystemErrorReason.html">– SystemErrorReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginError/UserInteractionRequiredReason.html">– UserInteractionRequiredReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginError.html#/s:10YJLoginSDK10LoginErrorO14DetailResponseV">– DetailResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Prompt.html">Prompt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ResponseType.html">ResponseType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Scope.html">Scope</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/LoginButtonDelegate.html">LoginButtonDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/LoginResult.html">LoginResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/OptionalParameters.html">OptionalParameters</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>OptionalParameters</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">OptionalParameters</span></code></pre>
+
+                </div>
+              </div>
+            <p>認可リクエスト時に指定する任意パラメーター。</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK18OptionalParametersV4bailSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/bail" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK18OptionalParametersV4bailSbSgvp">bail</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>同意画面で「同意しない」ボタンをクリックした際の遷移先。
+true: redirect_uriにcodeパラメーターを付加せず遷移。
+false or nil: Yahoo! JAPAN TOPページへ遷移。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bail</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK18OptionalParametersV7displayAA7DisplayOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/display" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK18OptionalParametersV7displayAA7DisplayOSgvp">display</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ログイン画面と同意画面で表示するページ種類。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">display</span><span class="p">:</span> <span class="kt"><a href="../Enums/Display.html">Display</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK18OptionalParametersV6maxAgeSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/maxAge" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK18OptionalParametersV6maxAgeSiSgvp">maxAge</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>最大認証経過時間。
+指定された秒数よりも認証日時が経過していた場合は再認証を要求。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">maxAge</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK18OptionalParametersV6promptAA6PromptOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/prompt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK18OptionalParametersV6promptAA6PromptOSgvp">prompt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ユーザーに強制させたいアクション。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">prompt</span><span class="p">:</span> <span class="kt"><a href="../Enums/Prompt.html">Prompt</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK18OptionalParametersV010additionalD0SDyS2SGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/additionalParameters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK18OptionalParametersV010additionalD0SDyS2SGSgvp">additionalParameters</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>その他未定義のパラメーター。</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    定義されていないパラメーターを指定したい場合に使用。
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">additionalParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK18OptionalParametersV4bail7display6maxAge6prompt010additionalD0ACSbSg_AA7DisplayOSgSiSgAA6PromptOSgSDyS2SGSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(bail:display:maxAge:prompt:additionalParameters:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK18OptionalParametersV4bail7display6maxAge6prompt010additionalD0ACSbSg_AA7DisplayOSgSiSgAA6PromptOSgSDyS2SGSgtcfc">init(bail:display:maxAge:prompt:additionalParameters:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>指定されたパラメーターを元にインスタンスを生成。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="nv">bail</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">display</span><span class="p">:</span> <span class="kt"><a href="../Enums/Display.html">Display</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">maxAge</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">prompt</span><span class="p">:</span> <span class="kt"><a href="../Enums/Prompt.html">Prompt</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">additionalParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bail</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>同意画面で「同意しない」ボタンをクリックした際の遷移先。</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>display</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>ログイン画面と同意画面で表示するページ種類。</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>maxAge</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>最大認証経過時間。</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>prompt</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>ユーザーに強制させたいアクション。</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>additionalParameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>その他未定義のパラメーター。</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>Copyright © 2019 Yahoo Japan Corporation. All Rights Reserved.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

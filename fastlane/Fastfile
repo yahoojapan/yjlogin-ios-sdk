@@ -1,0 +1,40 @@
+fastlane_version "2.1.1"
+
+default_platform :ios
+
+platform :ios do
+  scheme = 'YJLoginSDK'
+  project = 'YJLoginSDK.xcodeproj'
+  workspace = 'YJLoginSDK.xcworkspace'
+  repository = 'idservice-yconnect/yjlogin-ios-sdk-swift'
+  configuration = 'Release'
+
+  before_all do |lane, options|
+  end
+
+  lane :build_sdk do
+    carthage(command: 'build',
+             no_skip_current: true,
+             platform: 'iOS',
+             configuration: configuration)
+
+    run_tests(
+      project: project,
+      scheme: scheme,
+      code_coverage: true,
+      skip_build: true,
+      devices: ['iPhone Xʀ (13.0)', 'iPhone X (12.2)', 'iPhone 8 (11.4)', 'iPhone 7 (10.3.1)'],
+      result_bundle: true,
+      fail_build: false
+    )
+
+    slather(scheme: scheme, proj: project, cobertura_xml: false, html: true)
+    slather(scheme: scheme, proj: project, cobertura_xml: true, html: false)
+
+    after_all do |lane, options|
+    end
+
+    error do |lane, exception, options|
+    end
+  end
+end

@@ -1,0 +1,53 @@
+disabled_rules:
+- trailing_whitespace
+- type_name
+- cyclomatic_complexity
+- vertical_whitespace
+- trailing_comma
+- nesting
+- mark
+- large_tuple
+- superfluous_disable_command
+
+excluded:
+- Carthage
+- YJLoginSDKTests
+- HostApp
+
+opt_in_rules:
+- prohibited_super_call
+- overridden_super_call
+- private_outlet
+- private_action
+- private_over_fileprivate
+- force_unwrapping
+- type_contents_order
+
+file_length:
+- 500
+- 1200
+
+line_length: 300
+
+type_body_length:
+- 400 # warning
+- 600 # error
+
+identifier_name:
+  allowed_symbols: "_"
+  min_length: # warning and error
+    warning: 1
+    error: 0
+  max_length: # warning and error
+    warning: 60
+    error: 80
+
+type_name:
+  allowed_symbols: "_"
+
+function_body_length:
+- 100 # warning
+- 200 # error
+
+force_cast: warning
+force_try: error

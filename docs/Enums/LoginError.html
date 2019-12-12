@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LoginError Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/LoginError" class="dashAnchor"></a>
+    <a title="LoginError Enumeration Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">YJLoginSDK Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">YJLoginSDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        LoginError Enumeration Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/LoginButton.html">LoginButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginButton/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginButton/Color.html">– Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginManager.html">LoginManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Display.html">Display</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginError.html">LoginError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginError/RequestErrorReason.html">– RequestErrorReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginError/ResponseFailedReason.html">– ResponseFailedReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginError/SystemErrorReason.html">– SystemErrorReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginError/UserInteractionRequiredReason.html">– UserInteractionRequiredReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginError.html#/s:10YJLoginSDK10LoginErrorO14DetailResponseV">– DetailResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Prompt.html">Prompt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ResponseType.html">ResponseType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Scope.html">Scope</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/LoginButtonDelegate.html">LoginButtonDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/LoginResult.html">LoginResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/OptionalParameters.html">OptionalParameters</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>LoginError</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LoginError</span> <span class="p">:</span> <span class="kt">Error</span></code></pre>
+
+                </div>
+              </div>
+            <p>YJLoginSDKがログイン処理の結果として返却するエラー。</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK10LoginErrorO13requestFailedyA2C07RequestD6ReasonOcACmF"></a>
+                    <a name="//apple_ref/swift/Element/requestFailed(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK10LoginErrorO13requestFailedyA2C07RequestD6ReasonOcACmF">requestFailed(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>認可リクエストに問題がある場合。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">requestFailed</span><span class="p">(</span><span class="kt"><a href="../Enums/LoginError/RequestErrorReason.html">RequestErrorReason</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK10LoginErrorO14responseFailedyA2C08ResponseF6ReasonOcACmF"></a>
+                    <a name="//apple_ref/swift/Element/responseFailed(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK10LoginErrorO14responseFailedyA2C08ResponseF6ReasonOcACmF">responseFailed(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>認可レスポンスが不正な場合。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">responseFailed</span><span class="p">(</span><span class="kt"><a href="../Enums/LoginError/ResponseFailedReason.html">ResponseFailedReason</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK10LoginErrorO10userCancelyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/userCancel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK10LoginErrorO10userCancelyA2CmF">userCancel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ユーザーが同意をキャンセルした場合。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">userCancel</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK10LoginErrorO06systemD0yA2C06SystemD6ReasonOcACmF"></a>
+                    <a name="//apple_ref/swift/Element/systemError(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK10LoginErrorO06systemD0yA2C06SystemD6ReasonOcACmF">systemError(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Yahoo! ID連携のシステムエラーが発生している場合。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">systemError</span><span class="p">(</span><span class="kt"><a href="../Enums/LoginError/SystemErrorReason.html">SystemErrorReason</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK10LoginErrorO23userInteractionRequiredyA2C04UserfG6ReasonOcACmF"></a>
+                    <a name="//apple_ref/swift/Element/userInteractionRequired(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK10LoginErrorO23userInteractionRequiredyA2C04UserfG6ReasonOcACmF">userInteractionRequired(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ユーザーによるインタラクションが必要な場合。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">userInteractionRequired</span><span class="p">(</span><span class="kt"><a href="../Enums/LoginError/UserInteractionRequiredReason.html">UserInteractionRequiredReason</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK10LoginErrorO09undefinedD0yACs0D0_pSg_tcACmF"></a>
+                    <a name="//apple_ref/swift/Element/undefinedError(error:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK10LoginErrorO09undefinedD0yACs0D0_pSg_tcACmF">undefinedError(error:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>想定外のエラーが発生した場合。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">undefinedError</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK10LoginErrorO14authenticatingyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/authenticating" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK10LoginErrorO14authenticatingyA2CmF">authenticating</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>同時に認証処理が実行されている場合。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">authenticating</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Enum"></a>
+                <a name="//apple_ref/swift/Section/Enum" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Enum"></a>
+                  <h3 class="section-name"><p>Enum</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK10LoginErrorO07RequestD6ReasonO"></a>
+                    <a name="//apple_ref/swift/Enum/RequestErrorReason" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK10LoginErrorO07RequestD6ReasonO">RequestErrorReason</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code><a href="../Enums/LoginError.html#/s:10YJLoginSDK10LoginErrorO13requestFailedyA2C07RequestD6ReasonOcACmF">LoginError.requestFailed(_:)</a></code>のエラー発生原因。</p>
+
+                        <a href="../Enums/LoginError/RequestErrorReason.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">RequestErrorReason</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK10LoginErrorO20ResponseFailedReasonO"></a>
+                    <a name="//apple_ref/swift/Enum/ResponseFailedReason" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK10LoginErrorO20ResponseFailedReasonO">ResponseFailedReason</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code><a href="../Enums/LoginError.html#/s:10YJLoginSDK10LoginErrorO14responseFailedyA2C08ResponseF6ReasonOcACmF">LoginError.responseFailed(_:)</a></code>のエラー発生原因。</p>
+
+                        <a href="../Enums/LoginError/ResponseFailedReason.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ResponseFailedReason</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK10LoginErrorO06SystemD6ReasonO"></a>
+                    <a name="//apple_ref/swift/Enum/SystemErrorReason" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK10LoginErrorO06SystemD6ReasonO">SystemErrorReason</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code><a href="../Enums/LoginError.html#/s:10YJLoginSDK10LoginErrorO06systemD0yA2C06SystemD6ReasonOcACmF">LoginError.systemError(_:)</a></code>のエラー発生原因。</p>
+
+                        <a href="../Enums/LoginError/SystemErrorReason.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">SystemErrorReason</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK10LoginErrorO29UserInteractionRequiredReasonO"></a>
+                    <a name="//apple_ref/swift/Enum/UserInteractionRequiredReason" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK10LoginErrorO29UserInteractionRequiredReasonO">UserInteractionRequiredReason</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code><a href="../Enums/LoginError.html#/s:10YJLoginSDK10LoginErrorO23userInteractionRequiredyA2C04UserfG6ReasonOcACmF">LoginError.userInteractionRequired(_:)</a></code>のエラー発生原因。</p>
+
+                        <a href="../Enums/LoginError/UserInteractionRequiredReason.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">UserInteractionRequiredReason</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10YJLoginSDK10LoginErrorO14DetailResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DetailResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK10LoginErrorO14DetailResponseV">DetailResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>認可レスポンスのエラー詳細。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DetailResponse</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>Copyright © 2019 Yahoo Japan Corporation. All Rights Reserved.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
