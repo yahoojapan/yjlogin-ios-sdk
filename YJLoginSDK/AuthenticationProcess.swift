@@ -86,10 +86,10 @@ internal class AuthenticationProcess: AuthenticationProcessProtocol {
             case .unexpectedError:
                 return .failure(.undefinedError(error: error))
 
-            case .serverError(let detailResponse):
-                let loginErrorDetailResponse = LoginError.DetailResponse(error: detailResponse.error.rawValue, errorDescription: detailResponse.description, errorCode: detailResponse.code)
+            case .serverError(let error, let description, let code):
+                let loginErrorDetailResponse = LoginError.DetailResponse(error: error.rawValue, errorDescription: description, errorCode: code)
 
-                switch detailResponse.error {
+                switch error {
                 case .serverError:
                     return .failure(.systemError(.systemError(loginErrorDetailResponse)))
 
