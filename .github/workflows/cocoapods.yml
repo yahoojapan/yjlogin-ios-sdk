@@ -1,0 +1,13 @@
+name: Publish to Cocoapods
+on:
+  create:
+    tags:
+
+jobs:
+  build:
+     runs-on: macOS-latest
+     steps:
+       - users: actions/checkout@v1
+       - name: Publish
+         env: COCOAPODS_TRUNK_TOKEN: ${{ secres.COCOAPODS_TRUNK_TOKEN }}
+         run: pod trunk push YJLogin.podspec
