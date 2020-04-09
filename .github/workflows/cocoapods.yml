@@ -11,4 +11,4 @@ jobs:
        - name: Publish
          env: 
            COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
-         run: pod trunk push YJLogin.podspec
+         run: pod trunk push YJLoginSDK.podspec
