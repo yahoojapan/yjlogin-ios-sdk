@@ -5,6 +5,9 @@
   <a href="https://github.com/Carthage/Carthage">
      <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"/>
   </a>
+  <a href="https://cocoapods.org/pods/YJLoginSDK">
+     <img src="https://img.shields.io/cocoapods/v/YJLoginSDK.svg"/>
+  </a>
   <img src="https://img.shields.io/badge/platforms-iOS%2010.0+-333332.svg"/>
   <a href="https://github.com/yahoojapan/yjlogin-ios-sdk/actions">
      <img src="https://github.com/yahoojapan/yjlogin-ios-sdk/workflows/CI/badge.svg"/>
