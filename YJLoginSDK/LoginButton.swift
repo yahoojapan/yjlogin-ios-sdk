@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 /// `LoginButton`クラスを使用する際に、ログインアクションの状態を制御するためのDelegate。
 public protocol LoginButtonDelegate: class {
