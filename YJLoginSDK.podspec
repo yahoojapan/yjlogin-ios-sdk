@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "YJLoginSDK"
-  spec.version = "0.1.2"
+  spec.version = "1.0.0"
   spec.summary = "The official OpenID Connect iOS client library for Yahoo! JAPAN."
 
   spec.homepage = "https://developer.yahoo.co.jp/yconnect/v2/client_app/ios/swift/"
