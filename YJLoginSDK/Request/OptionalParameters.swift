@@ -35,7 +35,7 @@ public struct OptionalParameters {
     /// - Parameter bail: 同意画面で「同意しない」ボタンをクリックした際の遷移先。
     /// - Parameter display: ログイン画面と同意画面で表示するページ種類。
     /// - Parameter maxAge: 最大認証経過時間。
-    /// - Parameter prompst: ユーザーに強制させたいアクション。
+    /// - Parameter prompts: ユーザーに強制させたいアクション。
     /// - Parameter additionalParameters: その他未定義のパラメーター。
     public init(
         bail: Bool? = nil,
