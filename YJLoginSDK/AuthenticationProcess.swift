@@ -129,7 +129,7 @@ internal class AuthenticationProcess: AuthenticationProcessProtocol {
             request.redirectUri.host == url.host &&
             request.redirectUri.port == url.port &&
             request.redirectUri.path == url.path else {
-            return false
+                return false
         }
         ua.dismiss()
         self.onFinish?(self.convertLoginError(url: url, error: nil))
