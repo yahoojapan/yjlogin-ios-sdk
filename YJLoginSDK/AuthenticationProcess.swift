@@ -124,12 +124,12 @@ internal class AuthenticationProcess: AuthenticationProcessProtocol {
         }
 
         guard request.redirectUri.scheme == url.scheme &&
-            request.redirectUri.user == url.user &&
-            request.redirectUri.password == url.password &&
-            request.redirectUri.host == url.host &&
-            request.redirectUri.port == url.port &&
-            request.redirectUri.path == url.path else {
-                return false
+                request.redirectUri.user == url.user &&
+                request.redirectUri.password == url.password &&
+                request.redirectUri.host == url.host &&
+                request.redirectUri.port == url.port &&
+                request.redirectUri.path == url.path else {
+            return false
         }
         ua.dismiss()
         self.onFinish?(self.convertLoginError(url: url, error: nil))

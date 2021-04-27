@@ -46,7 +46,7 @@ class AuthenticationRequstTests: XCTestCase {
             bail: true,
             display: .inapp,
             maxAge: 3600,
-            prompt: .login
+            prompts: [.login]
         )
         let request = AuthenticationRequest(
             clientId: "client_id",
@@ -89,7 +89,7 @@ class AuthenticationRequstTests: XCTestCase {
             bail: true,
             display: .inapp,
             maxAge: 3600,
-            prompt: .login,
+            prompts: [.login],
             additionalParameters: ["string": "string", "int": "1"]
         )
         let request = AuthenticationRequest(
@@ -149,7 +149,7 @@ class AuthenticationRequstTests: XCTestCase {
             bail: true,
             display: .inapp,
             maxAge: 3600,
-            prompt: .consent,
+            prompts: [.consent],
             additionalParameters: additionalParameters
         )
 
@@ -174,6 +174,50 @@ class AuthenticationRequstTests: XCTestCase {
             XCTAssertEqual(component?.percentEncodedQueryItems, URLComponents.dictionaryToQueryItem(dic: additionalParameters))
         } else {
             XCTAssertEqual(request.requestUrl, URL(string: "https://auth.login.yahoo.co.jp/yconnect/v2/authorization?bail=0&client_id=duplicate_client_id&display=duplicate_display&max_age=1000&nonce=duplicated_nonce&prompt=duplicated_prompt&redirect_uri=duplicatescheme:/&response_type=duplicate_response_type&scope=duplicated_scope&state=duplicated_state"))
+        }
+    }
+
+    func test_requestUri_multiple_prompts() {
+        let optionalParameters = OptionalParameters(
+            bail: true,
+            display: .inapp,
+            maxAge: 3600,
+            prompts: [.login, .consent]
+        )
+
+        let request = AuthenticationRequest(
+            clientId: "client_id",
+            codeChallenge: "code_challenge",
+            nonce: "nonce",
+            redirectUri: URL(string: "scheme:/")!,
+            responseType: .code,
+            scopes: [.address, .email, .openid, .profile],
+            state: "state",
+            optionalParameter: optionalParameters
+        )
+        XCTAssertNotNil(request.requestUrl)
+        let component = URLComponents(url: request.requestUrl!, resolvingAgainstBaseURL: true)
+        XCTAssertEqual(component?.scheme, "https")
+        XCTAssertEqual(component?.host, "auth.login.yahoo.co.jp")
+        XCTAssertEqual(component?.path, "/yconnect/v2/authorization")
+
+        if #available(iOS 11.0, *) {
+            XCTAssertEqual(component?.percentEncodedQueryItems, [
+                URLQueryItem(name: "bail", value: "1"),
+                URLQueryItem(name: "client_id", value: "client_id"),
+                URLQueryItem(name: "code_challenge", value: "code_challenge"),
+                URLQueryItem(name: "code_challenge_method", value: "S256"),
+                URLQueryItem(name: "display", value: "inapp"),
+                URLQueryItem(name: "max_age", value: "3600"),
+                URLQueryItem(name: "nonce", value: "nonce"),
+                URLQueryItem(name: "prompt", value: "login%20consent"),
+                URLQueryItem(name: "redirect_uri", value: "scheme:/"),
+                URLQueryItem(name: "response_type", value: "code"),
+                URLQueryItem(name: "scope", value: "address%20email%20openid%20profile"),
+                URLQueryItem(name: "state", value: "state"),
+            ])
+        } else {
+            XCTAssertEqual(request.requestUrl, URL(string: "https://auth.login.yahoo.co.jp/yconnect/v2/authorization?bail=1&client_id=client_id&display=inapp&max_age=3600&nonce=nonce&prompt=login%20consent&redirect_uri=scheme:/&response_type=code&scope=address%20email%20openid%20profile&state=state"))
         }
     }
 }
