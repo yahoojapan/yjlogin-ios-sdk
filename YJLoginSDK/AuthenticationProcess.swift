@@ -138,12 +138,13 @@ internal class AuthenticationProcess: AuthenticationProcessProtocol {
 
     func start(request: AuthenticationRequest) {
         self.request = request
-        guard let url = request.requestUrl else {
+        guard let url = request.requestUrl,
+              let scheme = request.requestUrl?.scheme else {
             onFinish?(.failure(.undefinedError(error: nil)))
             return
         }
 
-        ua.present(url: url, callbackScheme: request.redirectUri.absoluteString, viewController: viewController) { result in
+        ua.present(url: url, callbackScheme: scheme, viewController: viewController) { result in
             self.ua.dismiss()
             switch result {
             case .success(let url):
