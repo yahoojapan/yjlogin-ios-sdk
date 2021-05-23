@@ -47,7 +47,7 @@ internal class AuthenticationProcess: AuthenticationProcessProtocol {
             }
 
             if #available(iOS 11.0, *) {
-                if case SFAuthenticationError.canceledLogin = error {
+                if case SFAuthenticationError.canceledLogin.rawValue = (error as NSError).code {
                     return .failure(.userCancel)
                 }
                 return .failure(.undefinedError(error: error))
@@ -124,12 +124,12 @@ internal class AuthenticationProcess: AuthenticationProcessProtocol {
         }
 
         guard request.redirectUri.scheme == url.scheme &&
-            request.redirectUri.user == url.user &&
-            request.redirectUri.password == url.password &&
-            request.redirectUri.host == url.host &&
-            request.redirectUri.port == url.port &&
-            request.redirectUri.path == url.path else {
-                return false
+                request.redirectUri.user == url.user &&
+                request.redirectUri.password == url.password &&
+                request.redirectUri.host == url.host &&
+                request.redirectUri.port == url.port &&
+                request.redirectUri.path == url.path else {
+            return false
         }
         ua.dismiss()
         self.onFinish?(self.convertLoginError(url: url, error: nil))
