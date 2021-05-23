@@ -1,6 +1,5 @@
 disabled_rules:
 - trailing_whitespace
-- type_name
 - cyclomatic_complexity
 - vertical_whitespace
 - trailing_comma
@@ -41,9 +40,6 @@ identifier_name:
   max_length: # warning and error
     warning: 60
     error: 80
-
-type_name:
-  allowed_symbols: "_"
 
 function_body_length:
 - 100 # warning
