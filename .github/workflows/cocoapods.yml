@@ -1,7 +1,8 @@
 name: Publish to Cocoapods
 on:
-  create:
+  push:
     tags:
+      - '*'
 
 jobs:
   build:
