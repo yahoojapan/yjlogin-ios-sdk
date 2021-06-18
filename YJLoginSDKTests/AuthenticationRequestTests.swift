@@ -263,7 +263,7 @@ class AuthenticationRequstTests: XCTestCase {
                 URLQueryItem(name: "state", value: "state"),
             ])
         } else {
-            XCTAssertEqual(request.requestUrl, URL(string: "https://auth.login.yahoo.co.jp/yconnect/v2/authorization?bail=1&client_id=client_id&display=inapp&max_age=3600&nonce=nonce&prompt=login%20consent&redirect_uri=scheme:/&response_type=code&scope=address%20email%20openid%20profile&state=state"))
+            XCTAssertEqual(request.requestUrl, URL(string: "https://hoge.yahoo.co.jp/yconnect/v2/authorization?bail=1&client_id=client_id&display=inapp&max_age=3600&nonce=nonce&prompt=login%20consent&redirect_uri=scheme:/&response_type=code&scope=address%20email%20openid%20profile&state=state"))
         }
     }
 }
