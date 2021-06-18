@@ -28,7 +28,22 @@ public class LoginManager {
     /// - Parameter clientId: アプリケーション登録時に発行したClient ID。
     /// - Parameter redirectUri: アプリケーション登録時に設定したフルURLもしくはカスタムURIスキーム。
     public func setup(clientId: String, redirectUri: URL) {
-        configuration = LoginConfiguration(clientId: clientId, redirectUri: redirectUri)
+        configuration = LoginConfiguration(clientId: clientId, redirectUri: redirectUri, issuer: Constant.issuer)
+    }
+
+    /// Issuerの設定を行う。
+    ///
+    /// - Parameter issuer: Issuer。
+    public func setIssuer(issuer: URL) {
+        guard let host = issuer.host, host.hasSuffix(".yahoo.co.jp") else {
+            fatalError("[YJLoginSDK] Please set valid issuer.")
+        }
+
+        guard issuer.path == "/yconnect/v2" else {
+            fatalError("[YJLoginSDK] Please set valid issuer.")
+        }
+
+        configuration?.issuer = issuer
     }
 
     /// Yahoo! ID連携でログインを行う。
@@ -90,7 +105,7 @@ public class LoginManager {
 
         let state =  try? SecureRandom.data(count: 32).base64urlEncodedString()
 
-        let request = AuthenticationRequest(clientId: configuration.clientId, codeChallenge: codeChallenge, nonce: nonce, redirectUri: configuration.redirectUri, responseType: .code, scopes: scopes, state: state, optionalParameter: optionalParameters)
+        let request = AuthenticationRequest(clientId: configuration.clientId, codeChallenge: codeChallenge, nonce: nonce, redirectUri: configuration.redirectUri, responseType: .code, scopes: scopes, state: state, optionalParameter: optionalParameters, issuer: configuration.issuer)
 
         authenticationProcess = process
         authenticationProcess?.onFinish = { [weak self] (result) in

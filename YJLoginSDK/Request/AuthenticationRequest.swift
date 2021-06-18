@@ -17,6 +17,7 @@ internal struct AuthenticationRequest {
     let scopes: [Scope]
     let state: String?
     var optionalParameter: OptionalParameters?
+    var issuer: URL? = Constant.issuer
 
     var requestUrl: URL? {
         var parameters: [String: String] = [
@@ -38,7 +39,7 @@ internal struct AuthenticationRequest {
         }
 
         // swiftlint:disable:next force_unwrapping
-        var authorizationUrlComponent = URLComponents(string: Constant.authorizationUrl)!
+        var authorizationUrlComponent = URLComponents(string: issuer!.absoluteString + Constant.authorizationPath)!
         authorizationUrlComponent.queryItems = URLComponents.dictionaryToQueryItem(dic: parameters)
         return authorizationUrlComponent.formUrlencodedUrl
     }
