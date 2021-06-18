@@ -9,8 +9,14 @@
      <img src="https://img.shields.io/cocoapods/v/YJLoginSDK.svg"/>
   </a>
   <img src="https://img.shields.io/badge/platforms-iOS%2010.0+-333332.svg"/>
-  <a href="https://github.com/yahoojapan/yjlogin-ios-sdk/actions">
+  <a href="https://github.com/yahoojapan/yjlogin-ios-sdk/actions/workflows/main.yml">
      <img src="https://github.com/yahoojapan/yjlogin-ios-sdk/workflows/CI/badge.svg"/>
+  </a>
+  <a href="https://github.com/yahoojapan/yjlogin-ios-sdk/actions/workflows/doc.yml">
+     <img src="https://github.com/yahoojapan/yjlogin-ios-sdk/workflows/Doc/badge.svg"/>
+  </a>
+  <a href="https://github.com/yahoojapan/yjlogin-ios-sdk/actions/workflows/cocoapods.yml">
+     <img src="https://github.com/yahoojapan/yjlogin-ios-sdk/workflows/Publish%20to%20Cocoapods/badge.svg"/>
   </a>
 </p>
 
