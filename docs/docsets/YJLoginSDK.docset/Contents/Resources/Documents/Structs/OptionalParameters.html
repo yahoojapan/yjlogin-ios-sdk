@@ -8,13 +8,21 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/swift/Struct/OptionalParameters" class="dashAnchor"></a>
     <a title="OptionalParameters Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">YJLoginSDK Docs</a> (100% documented)</p>
+        <p><a href="../index.html">YJLoginSDK 1.1.0 Docs</a> (100% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -106,6 +114,7 @@
             <h1>OptionalParameters</h1>
               <div class="declaration">
                 <div class="language">
+                  
                   <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">OptionalParameters</span></code></pre>
 
                 </div>
@@ -203,9 +212,9 @@ false or nil: Yahoo! JAPAN TOPページへ遷移。</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10YJLoginSDK18OptionalParametersV6promptAA6PromptOSgvp"></a>
-                    <a name="//apple_ref/swift/Property/prompt" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10YJLoginSDK18OptionalParametersV6promptAA6PromptOSgvp">prompt</a>
+                    <a name="/s:10YJLoginSDK18OptionalParametersV7promptsSayAA6PromptOGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/prompts" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK18OptionalParametersV7promptsSayAA6PromptOGSgvp">prompts</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -220,7 +229,7 @@ false or nil: Yahoo! JAPAN TOPページへ遷移。</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">prompt</span><span class="p">:</span> <span class="kt"><a href="../Enums/Prompt.html">Prompt</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">prompts</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/Prompt.html">Prompt</a></span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -262,9 +271,9 @@ false or nil: Yahoo! JAPAN TOPページへ遷移。</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10YJLoginSDK18OptionalParametersV4bail7display6maxAge6prompt010additionalD0ACSbSg_AA7DisplayOSgSiSgAA6PromptOSgSDyS2SGSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(bail:display:maxAge:prompt:additionalParameters:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10YJLoginSDK18OptionalParametersV4bail7display6maxAge6prompt010additionalD0ACSbSg_AA7DisplayOSgSiSgAA6PromptOSgSDyS2SGSgtcfc">init(bail:display:maxAge:prompt:additionalParameters:)</a>
+                    <a name="/s:10YJLoginSDK18OptionalParametersV4bail7display6maxAge7prompts010additionalD0ACSbSg_AA7DisplayOSgSiSgSayAA6PromptOGSgSDyS2SGSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(bail:display:maxAge:prompts:additionalParameters:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10YJLoginSDK18OptionalParametersV4bail7display6maxAge7prompts010additionalD0ACSbSg_AA7DisplayOSgSiSgSayAA6PromptOGSgSDyS2SGSgtcfc">init(bail:<wbr>display:<wbr>maxAge:<wbr>prompts:<wbr>additionalParameters:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -283,7 +292,7 @@ false or nil: Yahoo! JAPAN TOPページへ遷移。</p>
     <span class="nv">bail</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
     <span class="nv">display</span><span class="p">:</span> <span class="kt"><a href="../Enums/Display.html">Display</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
     <span class="nv">maxAge</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-    <span class="nv">prompt</span><span class="p">:</span> <span class="kt"><a href="../Enums/Prompt.html">Prompt</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">prompts</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/Prompt.html">Prompt</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
     <span class="nv">additionalParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="p">)</span></code></pre>
 
@@ -332,7 +341,7 @@ false or nil: Yahoo! JAPAN TOPページへ遷移。</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>prompt</em>
+                                <em>prompts</em>
                                 </code>
                               </td>
                               <td>
@@ -365,7 +374,7 @@ false or nil: Yahoo! JAPAN TOPページへ遷移。</p>
         </section>
         <section id="footer">
           <p>Copyright © 2019 Yahoo Japan Corporation. All Rights Reserved.</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

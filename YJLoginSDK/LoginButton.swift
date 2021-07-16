@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 /// `LoginButton`クラスを使用する際に、ログインアクションの状態を制御するためのDelegate。
-public protocol LoginButtonDelegate: class {
+public protocol LoginButtonDelegate: AnyObject {
 
     /// ログインボタンが押された直後に呼ばれる。
     /// - Parameter button: ログインアクションの開始時に押下されたボタン。
