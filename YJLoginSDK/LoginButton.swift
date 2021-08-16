@@ -5,7 +5,6 @@
 //  Copyright © 2019 Yahoo Japan Corporation. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 /// `LoginButton`クラスを使用する際に、ログインアクションの状態を制御するためのDelegate。
