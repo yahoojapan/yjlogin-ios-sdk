@@ -54,7 +54,8 @@ class LoginManagetTests: XCTestCase {
         self.wait(for: [expect], timeout: 2.0)
     }
 
-    func test_login_concurrent() {
+    func test_login_concurrent_with_disable_universal_links() {
+        LoginManager.shared.setEnableUniversalLinks(enableUniversalLinks: false)
         let stubProcess = StubProcess(result: .success(LoginResult(authorizationCode: "abc", state: nil)))
         let expect = self.expectation(description: self.name)
         let stubProcess2 = StubProcess(result: .success(LoginResult(authorizationCode: "abc", state: nil)))
@@ -77,6 +78,34 @@ class LoginManagetTests: XCTestCase {
                 } else {
                     XCTFail("The result should be fail with authenticating.")
                 }
+            }
+        }
+
+        self.wait(for: [expect, expect2], timeout: 2.0)
+    }
+
+    func test_login_concurrent_with_enable_universal_links() {
+        LoginManager.shared.setEnableUniversalLinks(enableUniversalLinks: true)
+        let stubProcess = StubProcess(result: .success(LoginResult(authorizationCode: "abc", state: nil)))
+        let expect = self.expectation(description: self.name)
+        let stubProcess2 = StubProcess(result: .success(LoginResult(authorizationCode: "abc", state: nil)))
+        let expect2 = self.expectation(description: self.name)
+
+        DispatchQueue.global().async {
+            LoginManager.shared.login(scopes: [.openid], nonce: "nonce", codeChallenge: "code_challenge", process: stubProcess) { result in
+                let result = try! result.get()
+                XCTAssertEqual(result.authorizationCode, "abc")
+                expect.fulfill()
+            }
+        }
+
+        usleep(100_000)
+
+        DispatchQueue.global().async {
+            LoginManager.shared.login(scopes: [.openid], nonce: "nonce", codeChallenge: "code_challenge", process: stubProcess2) { result in
+                let result = try! result.get()
+                XCTAssertEqual(result.authorizationCode, "abc")
+                expect2.fulfill()
             }
         }
 
