@@ -11,4 +11,5 @@ internal struct LoginConfiguration {
     let clientId: String
     let redirectUri: URL
     var issuer: URL
+    var enableUniversalLinks: Bool
 }

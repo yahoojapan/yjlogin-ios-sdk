@@ -28,7 +28,7 @@ public class LoginManager {
     /// - Parameter clientId: アプリケーション登録時に発行したClient ID。
     /// - Parameter redirectUri: アプリケーション登録時に設定したフルURLもしくはカスタムURIスキーム。
     public func setup(clientId: String, redirectUri: URL) {
-        configuration = LoginConfiguration(clientId: clientId, redirectUri: redirectUri, issuer: Constant.issuer)
+        configuration = LoginConfiguration(clientId: clientId, redirectUri: redirectUri, issuer: Constant.issuer, enableUniversalLinks: true)
     }
 
     /// Issuerの設定を行う。
@@ -44,6 +44,13 @@ public class LoginManager {
         }
 
         configuration?.issuer = issuer
+    }
+
+    /// enableUniversalLinksの設定を行う。
+    ///
+    /// - Parameter enableUniversalLinks: trueならUniversal Linksを有効にする。
+    public func setEnableUniversalLinks(enableUniversalLinks: Bool) {
+        configuration?.enableUniversalLinks = enableUniversalLinks
     }
 
     /// Yahoo! ID連携でログインを行う。
@@ -98,7 +105,9 @@ public class LoginManager {
             fatalError("[YJLoginSDK] Please call setup function before login.")
         }
 
-        guard authenticationProcess == nil else {
+        let enableUniversalLinks = configuration.enableUniversalLinks
+
+        if authenticationProcess != nil && !enableUniversalLinks {
             completion(.failure(LoginError.authenticating))
             return
         }
@@ -108,6 +117,7 @@ public class LoginManager {
         let request = AuthenticationRequest(clientId: configuration.clientId, codeChallenge: codeChallenge, nonce: nonce, redirectUri: configuration.redirectUri, responseType: .code, scopes: scopes, state: state, optionalParameter: optionalParameters, issuer: configuration.issuer)
 
         authenticationProcess = process
+        authenticationProcess?.setEnableUniversalLinks(enableUniversalLinks: enableUniversalLinks)
         authenticationProcess?.onFinish = { [weak self] (result) in
             completion(result)
             self?.authenticationProcess = nil

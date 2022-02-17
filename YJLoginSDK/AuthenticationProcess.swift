@@ -14,6 +14,7 @@ internal protocol AuthenticationProcessProtocol {
     var viewController: UIViewController? { get set }
     func start(request: AuthenticationRequest)
     func resume(url: URL) -> Bool
+    func setEnableUniversalLinks(enableUniversalLinks: Bool)
 }
 
 internal class AuthenticationProcess: AuthenticationProcessProtocol {
@@ -21,6 +22,7 @@ internal class AuthenticationProcess: AuthenticationProcessProtocol {
     var request: AuthenticationRequest?
     var onFinish: ((Result<LoginResult, LoginError>) -> Void)?
     weak var viewController: UIViewController?
+    var enableUniversalLinks: Bool = true
 
     init(viewController: UIViewController?) {
         if #available(iOS 12.0, *) {
@@ -118,6 +120,18 @@ internal class AuthenticationProcess: AuthenticationProcessProtocol {
         }
     }
 
+    private func presentUserAgent(url: URL, scheme: String) {
+        self.ua.present(url: url, callbackScheme: scheme, viewController: viewController) { result in
+            self.ua.dismiss()
+            switch result {
+            case .success(let url):
+                self.onFinish?(self.convertLoginError(url: url, error: nil))
+            case .failure(let error):
+                self.onFinish?(self.convertLoginError(url: nil, error: error))
+            }
+        }
+    }
+
     func resume(url: URL) -> Bool {
         guard let request = request else {
             return false
@@ -144,14 +158,27 @@ internal class AuthenticationProcess: AuthenticationProcessProtocol {
             return
         }
 
-        ua.present(url: url, callbackScheme: scheme, viewController: viewController) { result in
-            self.ua.dismiss()
-            switch result {
-            case .success(let url):
-                self.onFinish?(self.convertLoginError(url: url, error: nil))
-            case .failure(let error):
-                self.onFinish?(self.convertLoginError(url: nil, error: error))
+        if self.enableUniversalLinks {
+            var appAuthRequest = request
+            appAuthRequest.path = Constant.appAuthPath
+
+            guard let appauthUrl = appAuthRequest.requestUrl else {
+                onFinish?(.failure(.undefinedError(error: nil)))
+                return
             }
+
+            UIApplication.shared.open(appauthUrl, options: [.universalLinksOnly: true]) { isOpened in
+                if !isOpened {
+                    self.presentUserAgent(url: url, scheme: scheme)
+                }
+            }
+            return
         }
+
+        self.presentUserAgent(url: url, scheme: scheme)
+    }
+
+    func setEnableUniversalLinks(enableUniversalLinks: Bool) {
+        self.enableUniversalLinks = enableUniversalLinks
     }
 }
