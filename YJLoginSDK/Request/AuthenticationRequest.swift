@@ -9,6 +9,7 @@ import Foundation
 
 internal struct AuthenticationRequest {
 
+    var path: String = Constant.authorizationPath
     let clientId: String
     let codeChallenge: String
     let nonce: String
@@ -39,7 +40,7 @@ internal struct AuthenticationRequest {
         }
 
         // swiftlint:disable:next force_unwrapping
-        var authorizationUrlComponent = URLComponents(string: issuer!.absoluteString + Constant.authorizationPath)!
+        var authorizationUrlComponent = URLComponents(string: issuer!.absoluteString + path)!
         authorizationUrlComponent.queryItems = URLComponents.dictionaryToQueryItem(dic: parameters)
         return authorizationUrlComponent.formUrlencodedUrl
     }

@@ -24,4 +24,7 @@ internal struct StubProcess: AuthenticationProcessProtocol {
     func resume(url: URL) -> Bool {
         return true
     }
+
+    func setEnableUniversalLinks(enableUniversalLinks: Bool) {
+    }
 }
