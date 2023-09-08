@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  YJLoginSDKSample
 //
-//  Copyright © 2019 Yahoo Japan Corporation. All rights reserved.
+//  Copyright © LY Corporation. All rights reserved.
 //
 
 import UIKit
