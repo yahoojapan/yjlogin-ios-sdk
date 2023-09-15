@@ -2,7 +2,7 @@
 //  AuthenticationRequstTests.swift
 //  YJLoginSDKTests
 //
-//  Copyright © 2019 Yahoo Japan Corporation. All rights reserved.
+//  © 2019 LY Corporation. All rights reserved.
 //
 import XCTest
 @testable import YJLoginSDK

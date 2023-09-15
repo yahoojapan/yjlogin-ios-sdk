@@ -2,7 +2,7 @@
 //  LoginResult.swift
 //  YJLoginSDK
 //
-//  Copyright © 2019 Yahoo Japan Corporation. All rights reserved.
+//  © 2019 LY Corporation. All rights reserved.
 //
 
 /// 認可リクエストが成功した結果。

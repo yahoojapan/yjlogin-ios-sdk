@@ -2,7 +2,7 @@
 //  SFSafariViewControllerUserAgent.swift
 //  YJLoginSDK
 //
-//  Copyright © 2019 Yahoo Japan Corporation. All rights reserved.
+//  © 2019 LY Corporation. All rights reserved.
 //
 
 import Foundation
