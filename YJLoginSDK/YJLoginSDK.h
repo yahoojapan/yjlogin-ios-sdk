@@ -2,7 +2,7 @@
 //  YJLoginSDK.h
 //  YJLoginSDK
 //
-//  Copyright © LY Corporation. All rights reserved.
+//  Copyright © 2019 Yahoo Japan Corporation. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

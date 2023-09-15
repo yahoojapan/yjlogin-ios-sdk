@@ -1,5 +1,5 @@
 clean: true
-copyright: "Copyright © LY Corporation. All Rights Reserved."
+copyright: "Copyright © 2019 Yahoo Japan Corporation. All Rights Reserved."
 output: docs
 module: YJLoginSDK
 xcodebuild_arguments: [-workspace, YJLoginSDK.xcworkspace, -scheme, YJLoginSDK]
