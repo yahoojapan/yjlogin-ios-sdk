@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  YJLoginSDKSample
 //
-//  © 2019 LY Corporation. All rights reserved.
+//  © 2023 LY Corporation. All rights reserved.
 //
 
 import UIKit

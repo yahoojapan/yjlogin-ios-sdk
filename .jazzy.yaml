@@ -1,5 +1,5 @@
 clean: true
-copyright: "© 2019 LY Corporation. All Rights Reserved."
+copyright: "© 2023 LY Corporation. All Rights Reserved."
 output: docs
 module: YJLoginSDK
 xcodebuild_arguments: [-workspace, YJLoginSDK.xcworkspace, -scheme, YJLoginSDK]

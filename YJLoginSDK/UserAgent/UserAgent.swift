@@ -2,7 +2,7 @@
 //  UserAgent.swift
 //  YJLoginSDK
 //
-//  © 2019 LY Corporation. All rights reserved.
+//  © 2023 LY Corporation. All rights reserved.
 //
 
 import Foundation
