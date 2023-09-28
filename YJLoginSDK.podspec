@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
 
   spec.homepage = "https://developer.yahoo.co.jp/yconnect/v2/client_app/ios/swift/"
   spec.license = { :type => "Apache License, Version 2.0", :file => "LICENSE.txt" }
-  spec.author = "Yahoo Japan Corporation"
+  spec.author = "LY Corporation"
 
   spec.platform = :ios, "10.0"
   spec.swift_version = "5.0"
