@@ -10,6 +10,7 @@ platform :ios do
   configuration = 'Release'
 
   before_all do |lane, options|
+    xcode_select("/Applications/Xcode_15.0.app")
   end
 
   lane :build_sdk do
