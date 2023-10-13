@@ -32,7 +32,7 @@ if ! isExist rbenv; then
 fi
 
 # ローカルにruby環境を構築
-rbenv_fix="2.6.4"
+rbenv_fix="3.2.2"
 rbenv_local=$(rbenv local)
 rbenv_version_result=$(rbenv versions)
 echo $rbenv_version_result
@@ -42,10 +42,17 @@ if ! [[ $rbenv_version_result =~ $rbenv_fix ]]; then
 fi
 rbenv local $rbenv_fix
 
+# bundlerのインストール
+if ! isExist bundler; then
+  sectionEcho "install bundler"
+  rbenv exec gem install bundler
+  rbenv rehash
+fi
+
 # jazzyのインストール
 if ! isExist jazzy; then
   sectionEcho "install jazzy"
-  rbenv exec gem install jazzy
+  rbenv exec bundle install
 fi
 
 # swiftlint のインストール
