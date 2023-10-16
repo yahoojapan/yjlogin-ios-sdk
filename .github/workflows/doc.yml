@@ -13,11 +13,16 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: install-jazzy
-      run: gem install jazzy
+    - name: Select Xcode version
+      run: sudo xcode-select -s '/Applications/Xcode_15.0.app'
+
+    - name: install-bundler and jazzy
+      run: |
+        gem install bundler
+        bundle install --path vendor/bundle
 
     - name: Generate document
-      run: jazzy
+      run: bundle exec jazzy
 
     - name: Commit files
       env:
