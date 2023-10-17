@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  HostApp
 //
-//  Copyright © 2019 Yahoo Japan Corporation. All rights reserved.
+//  © 2023 LY Corporation. All rights reserved.
 //
 
 import UIKit
