@@ -36,13 +36,7 @@ class AuthenticationProcessTests: XCTestCase {
 
     func test_user_cancel() {
         let error: Error!
-        if #available(iOS 12.0, *) {
-            error = ASWebAuthenticationSessionError.init(.canceledLogin)
-        } else if #available(iOS 11.0, *) {
-            error = SFAuthenticationError.init(.canceledLogin)
-        } else {
-            error = SFSafariViewControllerUserAgentError.userCancel
-        }
+        error = ASWebAuthenticationSessionError.init(.canceledLogin)
 
         let stub = StubUserAgent(result: .failure(error))
         process = AuthenticationProcess(ua: stub)
