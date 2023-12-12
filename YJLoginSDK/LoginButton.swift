@@ -42,9 +42,9 @@ public class LoginButton: UIButton {
         var size: CGSize {
             switch self {
             case .icon:
-                return CGSize(width: 44.0, height: 44.0)
+                CGSize(width: 44.0, height: 44.0)
             case .normal:
-                return CGSize(width: 192.0, height: 40.0)
+                CGSize(width: 192.0, height: 40.0)
             }
         }
     }
@@ -94,7 +94,7 @@ public class LoginButton: UIButton {
 
     /// Auto Layout対応のためオーバーライド。
     override public var intrinsicContentSize: CGSize {
-        return style.size
+        style.size
     }
 
     // MARK: Public function
