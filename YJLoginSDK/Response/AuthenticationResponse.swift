@@ -22,7 +22,7 @@ internal struct AuthenticationResponse {
         var errorDescription: String?
         var errorCode: Int?
 
-        guard let queryItems = urlComponent.queryItems, queryItems.count != 0 else {
+        guard let queryItems = urlComponent.queryItems, !queryItems.isEmpty else {
             throw AuthenticationResponseError.userCancel
         }
 
