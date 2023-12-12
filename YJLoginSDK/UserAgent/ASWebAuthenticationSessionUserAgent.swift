@@ -40,6 +40,6 @@ enum ASWebAuthenticationSessionUserAgentError: Error {
 
 extension ASWebAuthenticationSessionUserAgent: ASWebAuthenticationPresentationContextProviding {
     func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
-        return UIApplication.shared.windows.filter {$0.isKeyWindow}.first ?? ASPresentationAnchor()
+        UIApplication.shared.windows.first(where: \.isKeyWindow) ?? ASPresentationAnchor()
     }
 }
