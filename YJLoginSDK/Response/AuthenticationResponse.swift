@@ -58,7 +58,7 @@ internal struct AuthenticationResponse {
             }
         }
 
-        if let error = error, let errorDescription = errorDescription, let errorCode = errorCode {
+        if let error, let errorDescription, let errorCode {
             guard let responseError = AuthenticationResponseError.Error(rawValue: error) else {
                 throw AuthenticationResponseError.undefinedError(error: error, description: errorDescription, code: errorCode)
             }

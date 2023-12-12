@@ -14,12 +14,12 @@ internal class ASWebAuthenticationSessionUserAgent: NSObject, UserAgent {
     internal func present(url: URL, callbackScheme: String, viewController: UIViewController?, completionHandler completion: @escaping (Result<URL, Error>) -> Void) {
 
         asWebAuthenticationSession = ASWebAuthenticationSession(url: url, callbackURLScheme: callbackScheme, completionHandler: { url, error in
-            if let url = url {
+            if let url {
                 completion(.success(url))
                 return
             }
 
-            if let error = error {
+            if let error {
                 completion(.failure(error))
                 return
             }

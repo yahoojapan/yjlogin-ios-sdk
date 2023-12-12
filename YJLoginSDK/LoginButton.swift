@@ -115,7 +115,7 @@ public class LoginButton: UIButton {
         delegate?.loginButtonDidStartLogin(self)
         let process = self.process ?? AuthenticationProcess(viewController: presentingViewController)
         LoginManager.shared.login(scopes: scopes, nonce: nonce, codeChallenge: codeChallenge, process: process, optionalParameters: optionalParameters) {[weak self] result in
-            if let self = self {
+            if let self {
                 switch result {
                 case .success(let response):
                     self.delegate?.loginButton(self, didSucceedLogin: response)

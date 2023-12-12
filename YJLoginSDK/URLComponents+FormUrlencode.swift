@@ -9,7 +9,7 @@ import Foundation
 
 internal extension URLComponents {
     var formUrlencodedUrl: URL? {
-        guard let url = url else { return nil }
+        guard let url else { return nil }
         return URL(string: url.absoluteString.replacingOccurrences(of: "+", with: "%2B"))
     }
 
