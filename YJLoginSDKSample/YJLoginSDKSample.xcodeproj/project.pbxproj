@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A488EEB62B285EBA00CDC217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1698BB222B922750024DC7F /* ViewController.swift */; };
+		A488EEB72B285EBA00CDC217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1698BB022B922750024DC7F /* AppDelegate.swift */; };
+		A488EEB82B285EBF00CDC217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1698BB422B922750024DC7F /* Main.storyboard */; };
+		A488EEB92B285EBF00CDC217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1698BB922B922760024DC7F /* LaunchScreen.storyboard */; };
+		A488EEBA2B285EC200CDC217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1698BB722B922760024DC7F /* Assets.xcassets */; };
+		A488EEBD2B285F0000CDC217 /* YJLoginSDK in Frameworks */ = {isa = PBXBuildFile; productRef = A488EEBC2B285F0000CDC217 /* YJLoginSDK */; };
 		B1698BB122B922750024DC7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1698BB022B922750024DC7F /* AppDelegate.swift */; };
 		B1698BB322B922750024DC7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1698BB222B922750024DC7F /* ViewController.swift */; };
 		B1698BB622B922750024DC7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1698BB422B922750024DC7F /* Main.storyboard */; };
@@ -31,6 +37,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A488EEA22B285E7200CDC217 /* YJLoginSDKSampleUsingSwiftPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJLoginSDKSampleUsingSwiftPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A488EEB22B285E7300CDC217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1698BAD22B922750024DC7F /* YJLoginSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJLoginSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1698BB022B922750024DC7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1698BB222B922750024DC7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +50,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A488EE9F2B285E7200CDC217 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A488EEBD2B285F0000CDC217 /* YJLoginSDK in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1698BAA22B922750024DC7F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,11 +69,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A488EEA32B285E7200CDC217 /* YJLoginSDKSampleUsingSwiftPM */ = {
+			isa = PBXGroup;
+			children = (
+				A488EEB22B285E7300CDC217 /* Info.plist */,
+			);
+			path = YJLoginSDKSampleUsingSwiftPM;
+			sourceTree = "<group>";
+		};
 		B1698BA422B922750024DC7F = {
 			isa = PBXGroup;
 			children = (
 				B1698BCF22B925960024DC7F /* YJLoginSDK.framework */,
 				B1698BAF22B922750024DC7F /* YJLoginSDKSample */,
+				A488EEA32B285E7200CDC217 /* YJLoginSDKSampleUsingSwiftPM */,
 				B1698BAE22B922750024DC7F /* Products */,
 				EC6DCC7B23057112008CEB27 /* Frameworks */,
 			);
@@ -67,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				B1698BAD22B922750024DC7F /* YJLoginSDKSample.app */,
+				A488EEA22B285E7200CDC217 /* YJLoginSDKSampleUsingSwiftPM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +120,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A488EEA12B285E7200CDC217 /* YJLoginSDKSampleUsingSwiftPM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A488EEB32B285E7300CDC217 /* Build configuration list for PBXNativeTarget "YJLoginSDKSampleUsingSwiftPM" */;
+			buildPhases = (
+				A488EE9E2B285E7200CDC217 /* Sources */,
+				A488EE9F2B285E7200CDC217 /* Frameworks */,
+				A488EEA02B285E7200CDC217 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YJLoginSDKSampleUsingSwiftPM;
+			packageProductDependencies = (
+				A488EEBC2B285F0000CDC217 /* YJLoginSDK */,
+			);
+			productName = YJLoginSDKSampleUsingSwiftPM;
+			productReference = A488EEA22B285E7200CDC217 /* YJLoginSDKSampleUsingSwiftPM.app */;
+			productType = "com.apple.product-type.application";
+		};
 		B1698BAC22B922750024DC7F /* YJLoginSDKSample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1698BBF22B922760024DC7F /* Build configuration list for PBXNativeTarget "YJLoginSDKSample" */;
@@ -108,6 +154,8 @@
 			dependencies = (
 			);
 			name = YJLoginSDKSample;
+			packageProductDependencies = (
+			);
 			productName = YJLoginSDKSample;
 			productReference = B1698BAD22B922750024DC7F /* YJLoginSDKSample.app */;
 			productType = "com.apple.product-type.application";
@@ -118,10 +166,14 @@
 		B1698BA522B922750024DC7F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1250;
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = "Yahoo Japan Corporation";
 				TargetAttributes = {
+					A488EEA12B285E7200CDC217 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
 					B1698BAC22B922750024DC7F = {
 						CreatedOnToolsVersion = 10.2;
 					};
@@ -136,16 +188,30 @@
 				Base,
 			);
 			mainGroup = B1698BA422B922750024DC7F;
+			packageReferences = (
+				A488EEBB2B285F0000CDC217 /* XCLocalSwiftPackageReference ".." */,
+			);
 			productRefGroup = B1698BAE22B922750024DC7F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				B1698BAC22B922750024DC7F /* YJLoginSDKSample */,
+				A488EEA12B285E7200CDC217 /* YJLoginSDKSampleUsingSwiftPM */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A488EEA02B285E7200CDC217 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A488EEB82B285EBF00CDC217 /* Main.storyboard in Resources */,
+				A488EEBA2B285EC200CDC217 /* Assets.xcassets in Resources */,
+				A488EEB92B285EBF00CDC217 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1698BAB22B922750024DC7F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -159,6 +225,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A488EE9E2B285E7200CDC217 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A488EEB72B285EBA00CDC217 /* AppDelegate.swift in Sources */,
+				A488EEB62B285EBA00CDC217 /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1698BA922B922750024DC7F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -190,10 +265,74 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A488EEB42B285E7300CDC217 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YJLoginSDKSampleUsingSwiftPM/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.yahoo.YJLoginSDKSampleUsingSwiftPM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A488EEB52B285E7300CDC217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YJLoginSDKSampleUsingSwiftPM/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.yahoo.YJLoginSDKSampleUsingSwiftPM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		B1698BBD22B922760024DC7F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -256,6 +395,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -355,6 +495,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A488EEB32B285E7300CDC217 /* Build configuration list for PBXNativeTarget "YJLoginSDKSampleUsingSwiftPM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A488EEB42B285E7300CDC217 /* Debug */,
+				A488EEB52B285E7300CDC217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B1698BA822B922750024DC7F /* Build configuration list for PBXProject "YJLoginSDKSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -374,6 +523,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		A488EEBB2B285F0000CDC217 /* XCLocalSwiftPackageReference ".." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A488EEBC2B285F0000CDC217 /* YJLoginSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = YJLoginSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B1698BA522B922750024DC7F /* Project object */;
 }
