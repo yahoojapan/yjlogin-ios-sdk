@@ -5,7 +5,7 @@
 //  © 2023 LY Corporation. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 /// `LoginButton`クラスを使用する際に、ログインアクションの状態を制御するためのDelegate。
 public protocol LoginButtonDelegate: AnyObject {
@@ -133,26 +133,13 @@ public class LoginButton: UIButton {
     }
 
     private func updateAppearence() {
-        let imageName: String!
-        let bundle = Bundle(for: LoginButton.self)
-
-        switch iconBackgroundColor {
-        case .red:
-            switch style {
-            case .icon:
-                imageName = "icon_red"
-            case .normal:
-                imageName = "button_red"
-            }
-        case .white:
-            switch style {
-            case .icon:
-                imageName = "icon_white"
-            case .normal:
-                imageName = "button_white"
-            }
+        let image = switch (iconBackgroundColor, style) {
+        case (.red, .icon): UIImage(resource: .iconRed)
+        case (.red, .normal): UIImage(resource: .buttonRed)
+        case (.white, .icon): UIImage(resource: .iconWhite)
+        case (.white, .normal): UIImage(resource: .buttonWhite)
         }
 
-        setImage(UIImage(named: imageName, in: bundle, compatibleWith: nil), for: .normal)
+        setImage(image, for: .normal)
     }
 }
