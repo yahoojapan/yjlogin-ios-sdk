@@ -55,13 +55,13 @@ public struct OptionalParameters {
         var parameters = [String: String]()
         if bail != nil { parameters["bail"] = "1" }
 
-        if let display = display { parameters["display"] = display.rawValue }
+        if let display { parameters["display"] = display.rawValue }
 
-        if let maxAge = maxAge { parameters["max_age"] = String(maxAge) }
+        if let maxAge { parameters["max_age"] = String(maxAge) }
 
-        if let prompts = prompts { parameters["prompt"] = prompts.map {$0.rawValue}.joined(separator: " ") }
+        if let prompts { parameters["prompt"] = prompts.map(\.rawValue).joined(separator: " ") }
 
-        if let additionalParameters = additionalParameters {
+        if let additionalParameters {
             parameters.merge(additionalParameters) {(_, additionalParametersValue) in additionalParametersValue}
         }
         return parameters

@@ -34,14 +34,14 @@ internal class AuthenticationProcess: AuthenticationProcessProtocol {
     }
 
     private func convertLoginError(url: URL?, error: Error?) -> Result<LoginResult, LoginError> {
-        if let error = error {
+        if let error {
             if case ASWebAuthenticationSessionError.canceledLogin = error {
                 return .failure(.userCancel)
             }
             return .failure(.undefinedError(error: error))
         }
 
-        guard let url = url else {
+        guard let url else {
             return .failure(.undefinedError(error: nil))
         }
 
