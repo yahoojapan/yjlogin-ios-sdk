@@ -18,7 +18,8 @@ let package = Package(
                 "Info.plist"
             ],
             resources: [
-                .process("Assets.xcassets")
+                .process("Assets.xcassets"),
+                .process("PrivacyInfo.xcprivacy")
             ]
         )
     ]
