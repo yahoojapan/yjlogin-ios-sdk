@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,8 +29,6 @@
 		B1C8D74222C475FA004CF30C /* UserAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C8D74122C475FA004CF30C /* UserAgent.swift */; };
 		B1C8D74422C47BFC004CF30C /* AuthenticationProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C8D74322C47BFC004CF30C /* AuthenticationProcess.swift */; };
 		B1C8D74622C4A6FC004CF30C /* ASWebAuthenticationSessionUserAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C8D74522C4A6FC004CF30C /* ASWebAuthenticationSessionUserAgent.swift */; };
-		B1C8D74822C4A727004CF30C /* SFAuthenticationSessionUserAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C8D74722C4A727004CF30C /* SFAuthenticationSessionUserAgent.swift */; };
-		B1C8D74A22C4A746004CF30C /* SFSafariViewControllerUserAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C8D74922C4A746004CF30C /* SFSafariViewControllerUserAgent.swift */; };
 		B1C8D74C22C4BD87004CF30C /* AuthenticationResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C8D74B22C4BD87004CF30C /* AuthenticationResponseError.swift */; };
 		B1C8D74F22C5089F004CF30C /* AuthenticationProcessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C8D74E22C5089F004CF30C /* AuthenticationProcessTests.swift */; };
 		B1C8D75222C5B19A004CF30C /* Scope.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C8D75122C5B19A004CF30C /* Scope.swift */; };
@@ -117,8 +115,6 @@
 		B1C8D74122C475FA004CF30C /* UserAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAgent.swift; sourceTree = "<group>"; };
 		B1C8D74322C47BFC004CF30C /* AuthenticationProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProcess.swift; sourceTree = "<group>"; };
 		B1C8D74522C4A6FC004CF30C /* ASWebAuthenticationSessionUserAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASWebAuthenticationSessionUserAgent.swift; sourceTree = "<group>"; };
-		B1C8D74722C4A727004CF30C /* SFAuthenticationSessionUserAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFAuthenticationSessionUserAgent.swift; sourceTree = "<group>"; };
-		B1C8D74922C4A746004CF30C /* SFSafariViewControllerUserAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewControllerUserAgent.swift; sourceTree = "<group>"; };
 		B1C8D74B22C4BD87004CF30C /* AuthenticationResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationResponseError.swift; sourceTree = "<group>"; };
 		B1C8D74E22C5089F004CF30C /* AuthenticationProcessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProcessTests.swift; sourceTree = "<group>"; };
 		B1C8D75122C5B19A004CF30C /* Scope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scope.swift; sourceTree = "<group>"; };
@@ -214,8 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				B1C8D74522C4A6FC004CF30C /* ASWebAuthenticationSessionUserAgent.swift */,
-				B1C8D74722C4A727004CF30C /* SFAuthenticationSessionUserAgent.swift */,
-				B1C8D74922C4A746004CF30C /* SFSafariViewControllerUserAgent.swift */,
 				B1C8D74122C475FA004CF30C /* UserAgent.swift */,
 			);
 			path = UserAgent;
@@ -371,8 +365,9 @@
 		B1DCE1D122B263F2005F5703 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = "Yahoo Japan Corporation";
 				TargetAttributes = {
 					B1CB3FAD22FD08D10069ED63 = {
@@ -473,7 +468,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B10A5EB8230BECA600EBB294 /* LoginButton.swift in Sources */,
-				B1C8D74822C4A727004CF30C /* SFAuthenticationSessionUserAgent.swift in Sources */,
 				B1D5762422D884E100A85071 /* OptionalParameters.swift in Sources */,
 				B10562CC2398A62D00359322 /* Data+base64url.swift in Sources */,
 				B10FE25E22C10910000EEC85 /* URLComponents+FormUrlencode.swift in Sources */,
@@ -483,7 +477,6 @@
 				B1DCE1FA22B265C8005F5703 /* LoginManager.swift in Sources */,
 				B1C8D75422C5B1C0004CF30C /* ResponseType.swift in Sources */,
 				B1C8D74622C4A6FC004CF30C /* ASWebAuthenticationSessionUserAgent.swift in Sources */,
-				B1C8D74A22C4A746004CF30C /* SFSafariViewControllerUserAgent.swift in Sources */,
 				B1EEBF2F22FD4BC1009F600D /* Constant.swift in Sources */,
 				B1C8D75822C5B200004CF30C /* Prompt.swift in Sources */,
 				B10FE25422BBEC87000EEC85 /* LoginError.swift in Sources */,
@@ -630,6 +623,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -696,6 +690,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -721,12 +716,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = YJLoginSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -735,6 +732,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.yahoo.YJLoginSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -748,12 +747,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = YJLoginSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -762,6 +763,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.yahoo.YJLoginSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

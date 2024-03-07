@@ -25,13 +25,7 @@ internal class AuthenticationProcess: AuthenticationProcessProtocol {
     var enableUniversalLinks: Bool = true
 
     init(viewController: UIViewController?) {
-        if #available(iOS 12.0, *) {
-            ua = ASWebAuthenticationSessionUserAgent()
-        } else if #available(iOS 11.0, *) {
-            ua = SFAuthenticationSessionUserAgent()
-        } else {
-            ua = SFSafariViewControllerUserAgent()
-        }
+        ua = ASWebAuthenticationSessionUserAgent()
         self.viewController = viewController
     }
 
@@ -40,28 +34,14 @@ internal class AuthenticationProcess: AuthenticationProcessProtocol {
     }
 
     private func convertLoginError(url: URL?, error: Error?) -> Result<LoginResult, LoginError> {
-        if let error = error {
-            if #available(iOS 12.0, *) {
-                if case ASWebAuthenticationSessionError.canceledLogin = error {
-                    return .failure(.userCancel)
-                }
-                return .failure(.undefinedError(error: error))
-            }
-
-            if #available(iOS 11.0, *) {
-                if case SFAuthenticationError.canceledLogin.rawValue = (error as NSError).code {
-                    return .failure(.userCancel)
-                }
-                return .failure(.undefinedError(error: error))
-            }
-
-            if case SFSafariViewControllerUserAgentError.userCancel = error {
+        if let error {
+            if case ASWebAuthenticationSessionError.canceledLogin = error {
                 return .failure(.userCancel)
             }
             return .failure(.undefinedError(error: error))
         }
 
-        guard let url = url else {
+        guard let url else {
             return .failure(.undefinedError(error: nil))
         }
 

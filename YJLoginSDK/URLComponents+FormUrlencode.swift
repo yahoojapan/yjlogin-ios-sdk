@@ -9,7 +9,7 @@ import Foundation
 
 internal extension URLComponents {
     var formUrlencodedUrl: URL? {
-        guard let url = url else { return nil }
+        guard let url else { return nil }
         return URL(string: url.absoluteString.replacingOccurrences(of: "+", with: "%2B"))
     }
 
@@ -18,8 +18,6 @@ internal extension URLComponents {
     }
 
     static func dictionaryToQueryItem(dic: [String: String]) -> [URLQueryItem] {
-        return dic.map {
-            return URLQueryItem(name: $0, value: $1)
-        }.sorted(by: {$0.name < $1.name})
+        dic.map(URLQueryItem.init(name:value:)).sorted(by: {$0.name < $1.name})
     }
 }

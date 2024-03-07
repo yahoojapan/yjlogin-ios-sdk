@@ -31,7 +31,7 @@ internal struct AuthenticationRequest {
             "code_challenge_method": "S256",
         ]
 
-        if let state = self.state {
+        if let state {
             parameters["state"] = state
         }
 

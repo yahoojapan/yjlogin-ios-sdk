@@ -5,7 +5,7 @@
 //  © 2023 LY Corporation. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 /// `LoginButton`クラスを使用する際に、ログインアクションの状態を制御するためのDelegate。
 public protocol LoginButtonDelegate: AnyObject {
@@ -42,9 +42,9 @@ public class LoginButton: UIButton {
         var size: CGSize {
             switch self {
             case .icon:
-                return CGSize(width: 44.0, height: 44.0)
+                CGSize(width: 44.0, height: 44.0)
             case .normal:
-                return CGSize(width: 192.0, height: 40.0)
+                CGSize(width: 192.0, height: 40.0)
             }
         }
     }
@@ -94,7 +94,7 @@ public class LoginButton: UIButton {
 
     /// Auto Layout対応のためオーバーライド。
     override public var intrinsicContentSize: CGSize {
-        return style.size
+        style.size
     }
 
     // MARK: Public function
@@ -115,7 +115,7 @@ public class LoginButton: UIButton {
         delegate?.loginButtonDidStartLogin(self)
         let process = self.process ?? AuthenticationProcess(viewController: presentingViewController)
         LoginManager.shared.login(scopes: scopes, nonce: nonce, codeChallenge: codeChallenge, process: process, optionalParameters: optionalParameters) {[weak self] result in
-            if let self = self {
+            if let self {
                 switch result {
                 case .success(let response):
                     self.delegate?.loginButton(self, didSucceedLogin: response)
@@ -133,26 +133,13 @@ public class LoginButton: UIButton {
     }
 
     private func updateAppearence() {
-        let imageName: String!
-        let bundle = Bundle(for: LoginButton.self)
-
-        switch iconBackgroundColor {
-        case .red:
-            switch style {
-            case .icon:
-                imageName = "icon_red"
-            case .normal:
-                imageName = "button_red"
-            }
-        case .white:
-            switch style {
-            case .icon:
-                imageName = "icon_white"
-            case .normal:
-                imageName = "button_white"
-            }
+        let image = switch (iconBackgroundColor, style) {
+        case (.red, .icon): UIImage(resource: .iconRed)
+        case (.red, .normal): UIImage(resource: .buttonRed)
+        case (.white, .icon): UIImage(resource: .iconWhite)
+        case (.white, .normal): UIImage(resource: .buttonWhite)
         }
 
-        setImage(UIImage(named: imageName, in: bundle, compatibleWith: nil), for: .normal)
+        setImage(image, for: .normal)
     }
 }

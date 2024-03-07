@@ -84,11 +84,7 @@ public class LoginManager {
     /// - Note:
     ///   iOS10をサポートする場合は必須。
     public func application(_ app: UIApplication, open url: URL?, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-        guard let url = url else { return false }
-
-        guard let authenticationProcess = self.authenticationProcess else {
-            return false
-        }
+        guard let url, let authenticationProcess else { return false }
         return authenticationProcess.resume(url: url)
     }
 
@@ -101,7 +97,7 @@ public class LoginManager {
         optionalParameters: OptionalParameters? = nil,
         completionHandler completion: @escaping (Result<LoginResult, LoginError>) -> Void) {
 
-        guard let configuration = configuration else {
+        guard let configuration else {
             fatalError("[YJLoginSDK] Please call setup function before login.")
         }
 
