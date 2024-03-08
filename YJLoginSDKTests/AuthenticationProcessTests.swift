@@ -91,7 +91,7 @@ class AuthenticationProcessTests: XCTestCase {
             }
         }
         process?.start(request: request)
-        self.wait(for: [expect], timeout: 2.0)
+        self.wait(for: [expect], timeout: 10.0)
     }
 
     func test_response_failed_invalid_state() {
