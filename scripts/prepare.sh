@@ -64,7 +64,7 @@ fi
 # swiftlint の version を確認する
 sectionEcho "check swiftlint version"
 current_ver=`swiftlint version`
-latest_ver=`brew info swiftlint 2>/dev/null | head -n 1 | cut -d " " -f3`
+latest_ver=`brew info swiftlint 2>/dev/null | head -n 1 | cut -d " " -f4`
 checkVersion ${current_ver} ${latest_ver} "swiftlint"
 
 # Mac に完了通知を出す
