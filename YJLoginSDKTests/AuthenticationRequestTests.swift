@@ -25,20 +25,16 @@ class AuthenticationRequstTests: XCTestCase {
         XCTAssertEqual(component?.host, "auth.login.yahoo.co.jp")
         XCTAssertEqual(component?.path, "/yconnect/v2/authorization")
 
-        if #available(iOS 11.0, *) {
-            XCTAssertEqual(component?.percentEncodedQueryItems, [
-                URLQueryItem(name: "client_id", value: "client_id"),
-                URLQueryItem(name: "code_challenge", value: "code_challenge"),
-                URLQueryItem(name: "code_challenge_method", value: "S256"),
-                URLQueryItem(name: "nonce", value: "nonce%2Bnonce"),
-                URLQueryItem(name: "redirect_uri", value: "scheme:/"),
-                URLQueryItem(name: "response_type", value: "code"),
-                URLQueryItem(name: "scope", value: "address%20email%20openid%20profile"),
-                URLQueryItem(name: "state", value: "state"),
-            ])
-        } else {
-            XCTAssertEqual(request.requestUrl, URL(string: "https://auth.login.yahoo.co.jp/yconnect/v2/authorization?client_id=client_id&nonce=nonce%2Bnonce&redirect_uri=scheme:/&response_type=code&scope=address%20email%20openid%20profile&state=state"))
-        }
+        XCTAssertEqual(component?.percentEncodedQueryItems, [
+            URLQueryItem(name: "client_id", value: "client_id"),
+            URLQueryItem(name: "code_challenge", value: "code_challenge"),
+            URLQueryItem(name: "code_challenge_method", value: "S256"),
+            URLQueryItem(name: "nonce", value: "nonce%2Bnonce"),
+            URLQueryItem(name: "redirect_uri", value: "scheme:/"),
+            URLQueryItem(name: "response_type", value: "code"),
+            URLQueryItem(name: "scope", value: "address%20email%20openid%20profile"),
+            URLQueryItem(name: "state", value: "state"),
+        ])
     }
 
     func test_requestUri_optional() {
@@ -64,24 +60,20 @@ class AuthenticationRequstTests: XCTestCase {
         XCTAssertEqual(component?.host, "auth.login.yahoo.co.jp")
         XCTAssertEqual(component?.path, "/yconnect/v2/authorization")
 
-        if #available(iOS 11.0, *) {
-            XCTAssertEqual(component?.percentEncodedQueryItems, [
-                URLQueryItem(name: "bail", value: "1"),
-                URLQueryItem(name: "client_id", value: "client_id"),
-                URLQueryItem(name: "code_challenge", value: "code_challenge"),
-                URLQueryItem(name: "code_challenge_method", value: "S256"),
-                URLQueryItem(name: "display", value: "inapp"),
-                URLQueryItem(name: "max_age", value: "3600"),
-                URLQueryItem(name: "nonce", value: "nonce"),
-                URLQueryItem(name: "prompt", value: "login"),
-                URLQueryItem(name: "redirect_uri", value: "scheme:/"),
-                URLQueryItem(name: "response_type", value: "code"),
-                URLQueryItem(name: "scope", value: "address%20email%20openid%20profile"),
-                URLQueryItem(name: "state", value: "state")
-            ])
-        } else {
-            XCTAssertEqual(request.requestUrl, URL(string: "https://auth.login.yahoo.co.jp/yconnect/v2/authorization?bail=1&client_id=client_id&display=inapp&max_age=3600&nonce=nonce&prompt=login&redirect_uri=scheme:/&response_type=code&scope=address%20email%20openid%20profile&state=state"))
-        }
+        XCTAssertEqual(component?.percentEncodedQueryItems, [
+            URLQueryItem(name: "bail", value: "1"),
+            URLQueryItem(name: "client_id", value: "client_id"),
+            URLQueryItem(name: "code_challenge", value: "code_challenge"),
+            URLQueryItem(name: "code_challenge_method", value: "S256"),
+            URLQueryItem(name: "display", value: "inapp"),
+            URLQueryItem(name: "max_age", value: "3600"),
+            URLQueryItem(name: "nonce", value: "nonce"),
+            URLQueryItem(name: "prompt", value: "login"),
+            URLQueryItem(name: "redirect_uri", value: "scheme:/"),
+            URLQueryItem(name: "response_type", value: "code"),
+            URLQueryItem(name: "scope", value: "address%20email%20openid%20profile"),
+            URLQueryItem(name: "state", value: "state")
+        ])
     }
 
     func test_requestUri_optional_additional() {
@@ -108,26 +100,22 @@ class AuthenticationRequstTests: XCTestCase {
         XCTAssertEqual(component?.host, "auth.login.yahoo.co.jp")
         XCTAssertEqual(component?.path, "/yconnect/v2/authorization")
 
-        if #available(iOS 11.0, *) {
-            XCTAssertEqual(component?.percentEncodedQueryItems, [
-                URLQueryItem(name: "bail", value: "1"),
-                URLQueryItem(name: "client_id", value: "client_id"),
-                URLQueryItem(name: "code_challenge", value: "code_challenge"),
-                URLQueryItem(name: "code_challenge_method", value: "S256"),
-                URLQueryItem(name: "display", value: "inapp"),
-                URLQueryItem(name: "int", value: "1"),
-                URLQueryItem(name: "max_age", value: "3600"),
-                URLQueryItem(name: "nonce", value: "nonce"),
-                URLQueryItem(name: "prompt", value: "login"),
-                URLQueryItem(name: "redirect_uri", value: "scheme:/"),
-                URLQueryItem(name: "response_type", value: "code"),
-                URLQueryItem(name: "scope", value: "address%20email%20openid%20profile"),
-                URLQueryItem(name: "state", value: "state"),
-                URLQueryItem(name: "string", value: "string")
-            ])
-        } else {
-            XCTAssertEqual(request.requestUrl, URL(string: "https://auth.login.yahoo.co.jp/yconnect/v2/authorization?bail=1&client_id=client_id&display=inapp&int=1&max_age=3600&nonce=nonce&prompt=login&redirect_uri=scheme:/&response_type=code&scope=address%20email%20openid%20profile&state=state&string=string"))
-        }
+        XCTAssertEqual(component?.percentEncodedQueryItems, [
+            URLQueryItem(name: "bail", value: "1"),
+            URLQueryItem(name: "client_id", value: "client_id"),
+            URLQueryItem(name: "code_challenge", value: "code_challenge"),
+            URLQueryItem(name: "code_challenge_method", value: "S256"),
+            URLQueryItem(name: "display", value: "inapp"),
+            URLQueryItem(name: "int", value: "1"),
+            URLQueryItem(name: "max_age", value: "3600"),
+            URLQueryItem(name: "nonce", value: "nonce"),
+            URLQueryItem(name: "prompt", value: "login"),
+            URLQueryItem(name: "redirect_uri", value: "scheme:/"),
+            URLQueryItem(name: "response_type", value: "code"),
+            URLQueryItem(name: "scope", value: "address%20email%20openid%20profile"),
+            URLQueryItem(name: "state", value: "state"),
+            URLQueryItem(name: "string", value: "string")
+        ])
     }
 
     func test_requestUri_optional_additional_dupulicate() {
@@ -170,11 +158,7 @@ class AuthenticationRequstTests: XCTestCase {
         XCTAssertEqual(component?.host, "auth.login.yahoo.co.jp")
         XCTAssertEqual(component?.path, "/yconnect/v2/authorization")
 
-        if #available(iOS 11.0, *) {
-            XCTAssertEqual(component?.percentEncodedQueryItems, URLComponents.dictionaryToQueryItem(dic: additionalParameters))
-        } else {
-            XCTAssertEqual(request.requestUrl, URL(string: "https://auth.login.yahoo.co.jp/yconnect/v2/authorization?bail=0&client_id=duplicate_client_id&display=duplicate_display&max_age=1000&nonce=duplicated_nonce&prompt=duplicated_prompt&redirect_uri=duplicatescheme:/&response_type=duplicate_response_type&scope=duplicated_scope&state=duplicated_state"))
-        }
+        XCTAssertEqual(component?.percentEncodedQueryItems, URLComponents.dictionaryToQueryItem(dic: additionalParameters))
     }
 
     func test_requestUri_multiple_prompts() {
@@ -201,24 +185,20 @@ class AuthenticationRequstTests: XCTestCase {
         XCTAssertEqual(component?.host, "auth.login.yahoo.co.jp")
         XCTAssertEqual(component?.path, "/yconnect/v2/authorization")
 
-        if #available(iOS 11.0, *) {
-            XCTAssertEqual(component?.percentEncodedQueryItems, [
-                URLQueryItem(name: "bail", value: "1"),
-                URLQueryItem(name: "client_id", value: "client_id"),
-                URLQueryItem(name: "code_challenge", value: "code_challenge"),
-                URLQueryItem(name: "code_challenge_method", value: "S256"),
-                URLQueryItem(name: "display", value: "inapp"),
-                URLQueryItem(name: "max_age", value: "3600"),
-                URLQueryItem(name: "nonce", value: "nonce"),
-                URLQueryItem(name: "prompt", value: "login%20consent"),
-                URLQueryItem(name: "redirect_uri", value: "scheme:/"),
-                URLQueryItem(name: "response_type", value: "code"),
-                URLQueryItem(name: "scope", value: "address%20email%20openid%20profile"),
-                URLQueryItem(name: "state", value: "state"),
-            ])
-        } else {
-            XCTAssertEqual(request.requestUrl, URL(string: "https://auth.login.yahoo.co.jp/yconnect/v2/authorization?bail=1&client_id=client_id&display=inapp&max_age=3600&nonce=nonce&prompt=login%20consent&redirect_uri=scheme:/&response_type=code&scope=address%20email%20openid%20profile&state=state"))
-        }
+        XCTAssertEqual(component?.percentEncodedQueryItems, [
+            URLQueryItem(name: "bail", value: "1"),
+            URLQueryItem(name: "client_id", value: "client_id"),
+            URLQueryItem(name: "code_challenge", value: "code_challenge"),
+            URLQueryItem(name: "code_challenge_method", value: "S256"),
+            URLQueryItem(name: "display", value: "inapp"),
+            URLQueryItem(name: "max_age", value: "3600"),
+            URLQueryItem(name: "nonce", value: "nonce"),
+            URLQueryItem(name: "prompt", value: "login%20consent"),
+            URLQueryItem(name: "redirect_uri", value: "scheme:/"),
+            URLQueryItem(name: "response_type", value: "code"),
+            URLQueryItem(name: "scope", value: "address%20email%20openid%20profile"),
+            URLQueryItem(name: "state", value: "state"),
+        ])
     }
 
     func test_requestUri_issuer() {
@@ -247,23 +227,19 @@ class AuthenticationRequstTests: XCTestCase {
         XCTAssertEqual(component?.host, "hoge.yahoo.co.jp")
         XCTAssertEqual(component?.path, "/yconnect/v2/authorization")
 
-        if #available(iOS 11.0, *) {
-            XCTAssertEqual(component?.percentEncodedQueryItems, [
-                URLQueryItem(name: "bail", value: "1"),
-                URLQueryItem(name: "client_id", value: "client_id"),
-                URLQueryItem(name: "code_challenge", value: "code_challenge"),
-                URLQueryItem(name: "code_challenge_method", value: "S256"),
-                URLQueryItem(name: "display", value: "inapp"),
-                URLQueryItem(name: "max_age", value: "3600"),
-                URLQueryItem(name: "nonce", value: "nonce"),
-                URLQueryItem(name: "prompt", value: "login%20consent"),
-                URLQueryItem(name: "redirect_uri", value: "scheme:/"),
-                URLQueryItem(name: "response_type", value: "code"),
-                URLQueryItem(name: "scope", value: "address%20email%20openid%20profile"),
-                URLQueryItem(name: "state", value: "state"),
-            ])
-        } else {
-            XCTAssertEqual(request.requestUrl, URL(string: "https://hoge.yahoo.co.jp/yconnect/v2/authorization?bail=1&client_id=client_id&display=inapp&max_age=3600&nonce=nonce&prompt=login%20consent&redirect_uri=scheme:/&response_type=code&scope=address%20email%20openid%20profile&state=state"))
-        }
+        XCTAssertEqual(component?.percentEncodedQueryItems, [
+            URLQueryItem(name: "bail", value: "1"),
+            URLQueryItem(name: "client_id", value: "client_id"),
+            URLQueryItem(name: "code_challenge", value: "code_challenge"),
+            URLQueryItem(name: "code_challenge_method", value: "S256"),
+            URLQueryItem(name: "display", value: "inapp"),
+            URLQueryItem(name: "max_age", value: "3600"),
+            URLQueryItem(name: "nonce", value: "nonce"),
+            URLQueryItem(name: "prompt", value: "login%20consent"),
+            URLQueryItem(name: "redirect_uri", value: "scheme:/"),
+            URLQueryItem(name: "response_type", value: "code"),
+            URLQueryItem(name: "scope", value: "address%20email%20openid%20profile"),
+            URLQueryItem(name: "state", value: "state"),
+        ])
     }
 }
