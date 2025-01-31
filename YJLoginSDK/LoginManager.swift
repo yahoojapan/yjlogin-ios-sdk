@@ -80,9 +80,6 @@ public class LoginManager {
     /// - Parameter app: アプリのシングルトン。
     /// - Parameter url: アプリが起動された際のURL。
     /// - Parameter options: URL制御のオプション。
-    ///
-    /// - Note:
-    ///   iOS10をサポートする場合は必須。
     public func application(_ app: UIApplication, open url: URL?, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
         guard let url, let authenticationProcess else { return false }
         return authenticationProcess.resume(url: url)
