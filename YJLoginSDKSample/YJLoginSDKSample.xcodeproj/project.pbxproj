@@ -13,6 +13,7 @@
 		A488EEB92B285EBF00CDC217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1698BB922B922760024DC7F /* LaunchScreen.storyboard */; };
 		A488EEBA2B285EC200CDC217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1698BB722B922760024DC7F /* Assets.xcassets */; };
 		A488EEBD2B285F0000CDC217 /* YJLoginSDK in Frameworks */ = {isa = PBXBuildFile; productRef = A488EEBC2B285F0000CDC217 /* YJLoginSDK */; };
+		A4D3C4E72D2A8F1200C0AA11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3C4E62D2A8F1200C0AA11 /* SceneDelegate.swift */; };
 		B1698BB122B922750024DC7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1698BB022B922750024DC7F /* AppDelegate.swift */; };
 		B1698BB322B922750024DC7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1698BB222B922750024DC7F /* ViewController.swift */; };
 		B1698BB622B922750024DC7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1698BB422B922750024DC7F /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		B1698BBB22B922760024DC7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1698BB922B922760024DC7F /* LaunchScreen.storyboard */; };
 		B1698BD022B925960024DC7F /* YJLoginSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1698BCF22B925960024DC7F /* YJLoginSDK.framework */; };
 		B1698BD122B925960024DC7F /* YJLoginSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1698BCF22B925960024DC7F /* YJLoginSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1A2C3D42D2A8F1300DDDD22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3C4E62D2A8F1200C0AA11 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +41,7 @@
 /* Begin PBXFileReference section */
 		A488EEA22B285E7200CDC217 /* YJLoginSDKSampleUsingSwiftPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJLoginSDKSampleUsingSwiftPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A488EEB22B285E7300CDC217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4D3C4E62D2A8F1200C0AA11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B1698BAD22B922750024DC7F /* YJLoginSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJLoginSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1698BB022B922750024DC7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1698BB222B922750024DC7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				B1698BB022B922750024DC7F /* AppDelegate.swift */,
+				A4D3C4E62D2A8F1200C0AA11 /* SceneDelegate.swift */,
 				B1698BB222B922750024DC7F /* ViewController.swift */,
 				B1698BB422B922750024DC7F /* Main.storyboard */,
 				B1698BB722B922760024DC7F /* Assets.xcassets */,
@@ -230,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A488EEB72B285EBA00CDC217 /* AppDelegate.swift in Sources */,
+				A4D3C4E72D2A8F1200C0AA11 /* SceneDelegate.swift in Sources */,
 				A488EEB62B285EBA00CDC217 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1698BB322B922750024DC7F /* ViewController.swift in Sources */,
+				B1A2C3D42D2A8F1300DDDD22 /* SceneDelegate.swift in Sources */,
 				B1698BB122B922750024DC7F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
