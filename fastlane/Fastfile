@@ -10,7 +10,11 @@ platform :ios do
   configuration = 'Release'
 
   before_all do |lane, options|
-    xcode_select("/Applications/Xcode_15.0.app")
+    if ENV['XCODE_APP_PATH'].to_s.empty?
+      UI.message("Using currently selected Xcode.")
+    else
+      xcode_select(ENV['XCODE_APP_PATH'])
+    end
   end
 
   lane :build_sdk do
