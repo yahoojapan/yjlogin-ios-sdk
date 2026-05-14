@@ -29,7 +29,7 @@ platform :ios do
       scheme: scheme,
       code_coverage: true,
       skip_build: true,
-      devices: ['iPhone 17 (26.4.1)', 'iPhone 12 (15.5)'],
+      devices: ['iPhone 17 (26.4)'],
       result_bundle: true,
       fail_build: false
     )

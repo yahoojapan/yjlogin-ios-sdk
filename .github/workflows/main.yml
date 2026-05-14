@@ -5,9 +5,9 @@ on: [push, pull_request]
 jobs:
   build:
 
-    runs-on: macos-latest
+    runs-on: macos-26
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v6
     - name: Run test
       run: fastlane ios build_sdk
