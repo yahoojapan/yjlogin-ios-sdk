@@ -1,2 +1,3 @@
 ---
-BUNDLE_PATH: "vendor/bundle"
+BUNDLE_PATH: "/Users/runner/work/yjlogin-ios-sdk/yjlogin-ios-sdk/vendor/bundle"
+BUNDLE_DEPLOYMENT: "true"
