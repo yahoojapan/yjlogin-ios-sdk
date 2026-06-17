@@ -3,4 +3,4 @@
 source "https://rubygems.org"
 
 gem "jazzy"
-gem "activesupport", "= 7.0.8"
+gem "activesupport", "7.2.3.1"
